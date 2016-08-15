@@ -8,11 +8,13 @@ $orange: #F47D4A;
 /* color yalllllll */
 
 
-
+h2, h3 {
+  animation-duration: 5s;
+}
 
 .projDiv {
     width: 100%;
     height: 200px;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 0px;
 }
