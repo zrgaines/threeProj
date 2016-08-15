@@ -4,16 +4,18 @@
 		<meta charset=utf-8>
 		<title>Gall3ry</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 	</head>
 	<body>
-    <div class="container-fluid header">
+    <div class="container header">
       <div class="row">
-        <h1></h1>
+        <h1 id="headerText">Gallery.js</h1>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="proj">
           <h2 class="projTitle">Blue Balls</h2>
@@ -35,7 +37,7 @@
       function init() {
         container = document.getElementById( 'proj1' );
 
-        camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 2000 );
+        camera = new THREE.PerspectiveCamera( window.innerHeight, window.innerHeight / 200, 1, 2000 );
         camera.position.y = -1500;
         scene = new THREE.Scene();
 
