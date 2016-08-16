@@ -5,30 +5,36 @@
 		<title>Gall3ry</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <script src="script.js"></script>
 	</head>
 	<body>
-    <div class="container-fluid header">
-      <div class="row">
+    <span class="container-fluid header">
+      <div class="row" id="headerRow">
         <h1 id="headerText">Gall3ry.js</h1>
+        <h3 id="subHeading">A collection of three.js projects</h3>
       </div>
-    </div>
-    <div class="container-fluid">
+    </span>
+    <span class="container-fluid">
       <div class="row">
         <div class="proj">
-          <h2 class="projTitle">Blue Balls</h2>
-          <h3 class="projAuthor">Zach Gaines</h3>
+          <div class="wrapper">
+            <h2 class="projTitle disNone">Blue Balls</h2>
+            <h3 class="projAuthor disNone">Zach Gaines</h3>
+          </div>
           <div class="projDiv" id="proj1"></div>
         </div>
         <div class="proj">
-          <h2 class="projTitle">LEARN 3</h2>
-          <h3 class="projAuthor"> alex baldwin</h3>
+          <div class="wrapper">
+            <h2 class="projTitle disNone">three.js round 1</h2>
+            <h3 class="projAuthor disNone"> alex baldwin</h3>
+          </div>
           <div class="projDiv" id="proj2"></div>
         </div>
       </div>
-    </div>
+    </span>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.js"></script>
 		<script>
 			// Initialization      
@@ -37,13 +43,16 @@
       init();
       init2();
       animate();
+
+      //Blue balls
       function init() {
         container = document.getElementById( 'proj1' );
 
         camera = new THREE.PerspectiveCamera( window.innerHeight, window.innerHeight / 200, 1, 2000 );
-        camera.position.y = -1500;
-        scene = new THREE.Scene();
+        camera.position.y = -1000;
 
+        scene = new THREE.Scene();
+        
         // Lights, gotta be able to see shit
         var light;
         scene.add( new THREE.AmbientLight( 0x3385ff ) );
@@ -74,7 +83,7 @@
       
 
         // More setup stuff for renderer
-        renderer = new THREE.WebGLRenderer();
+        renderer = new THREE.WebGLRenderer({alpha:true});
         renderer.setSize( window.innerWidth, 200 );
         container.appendChild( renderer.domElement );
         container.addEventListener( 'resize', onWindowResize, false );
@@ -89,14 +98,17 @@
 
       function animate() {
         requestAnimationFrame( animate );
+        camera.rotation.x = 90 * Math.PI / 180;
         render();
       }
             
       // Runs constantly, think of like an update loop
       function render() {
         var timer = Date.now() * 0.00001;
+        camera.position.x = Math.cos( timer * 50 ) * 200;
+        camera.position.y = Math.tan( timer * 50 ) * 200;
+        camera.position.z = Math.sin( timer * 50 ) * 200;
         camera.lookAt( scene.position );
-        
         for ( var i = 0, l = scene.children.length; i < l; i ++ ) {
           var object = scene.children[ i ];
           
@@ -109,8 +121,8 @@
       }
 
 
-
-
+    
+      //learn 3
       function init2() {
         
         container2 = document.getElementById( 'proj2' );
@@ -129,6 +141,8 @@
 
         //THREEx.WindowResize(renderer, camera);
         var shape = [];
+        var shapeSpeed = .2;
+
         geometry = new THREE.IcosahedronGeometry(2.5,0);
         material = new THREE.MeshNormalMaterial({ color: 0x0000ff });
         shape[0] = new THREE.Mesh( geometry, material );
@@ -148,12 +162,19 @@
         function render() {
           requestAnimationFrame( render );
 
+          for (var i = 0; i < shape.length; i++) {
+            if(shape[i].position.x > 25) {
+              shape[i].position.x = -15;
+            }
+            shape[i].position.x += shapeSpeed;
+          }
           shape[0].rotation.x += 0.035;
           shape[0].rotation.y -= 0.005;
           shape[1].rotation.y += 0.015;
           shape[1].rotation.z -= 0.005;
           shape[2].rotation.z -= 0.025;
           shape[2].rotation.x += 0.005;
+
           renderer.render(scene, camera);
         }
         render();
