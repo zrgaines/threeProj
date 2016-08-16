@@ -11,22 +11,22 @@
     <script src="script.js"></script>
 	</head>
 	<body>
-    <span class="container-fluid header">
+    <div class="container-fluid header">
       <div class="row" id="headerRow">
         <h1 id="headerText">Gall3ry.js</h1>
         <h3 id="subHeading">A collection of three.js projects</h3>
       </div>
-    </span>
-    <span class="container-fluid">
+    </div>
+    <div class="container-fluid">
       <div class="row">
-        <div class="proj">
+        <div class="proj" id="projDiv1">
           <div class="wrapper">
             <h2 class="projTitle disNone">Blue Balls</h2>
             <h3 class="projAuthor disNone">Zach Gaines</h3>
           </div>
           <div class="projDiv" id="proj1"></div>
         </div>
-        <div class="proj">
+        <div class="proj" id="projDiv2">
           <div class="wrapper">
             <h2 class="projTitle disNone">three.js round 1</h2>
             <h3 class="projAuthor disNone"> alex baldwin</h3>
@@ -34,7 +34,7 @@
           <div class="projDiv" id="proj2"></div>
         </div>
       </div>
-    </span>
+    </div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.js"></script>
 		<script>
 			// Initialization      
@@ -48,7 +48,7 @@
       function init() {
         container = document.getElementById( 'proj1' );
 
-        camera = new THREE.PerspectiveCamera( window.innerHeight, window.innerHeight / 200, 1, 2000 );
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 300, 1, 5000 );
         camera.position.y = -1000;
 
         scene = new THREE.Scene();
@@ -84,21 +84,20 @@
 
         // More setup stuff for renderer
         renderer = new THREE.WebGLRenderer({alpha:true});
-        renderer.setSize( window.innerWidth, 200 );
+        renderer.setSize( window.innerWidth, 300 );
         container.appendChild( renderer.domElement );
         container.addEventListener( 'resize', onWindowResize, false );
       }
 
       // Makes it so it doesnt break when you adjust window size
       function onWindowResize() {
-        camera.aspect = window.innerWidth / 200;
+        camera.aspect = window.innerWidth / 300;
         camera.updateProjectionMatrix();
-        renderer.setSize( window.innerWidth, 200 );
+        renderer.setSize( window.innerWidth, 300 );
       }
 
       function animate() {
         requestAnimationFrame( animate );
-        camera.rotation.x = 90 * Math.PI / 180;
         render();
       }
             
@@ -133,10 +132,10 @@
         var pink = new THREE.Color(0xfca4c5);
 
         var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+        var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 300, 0.1, 1000 );
 
         var renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize( window.innerWidth, 200 );
+        renderer.setSize( window.innerWidth, 300 );
         container2.appendChild( renderer.domElement );
 
         //THREEx.WindowResize(renderer, camera);
