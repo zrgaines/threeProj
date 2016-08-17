@@ -8,7 +8,7 @@
       function init() {
         container = document.getElementById( 'proj1' );
 
-        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 300, 1, 5000 );
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 400, 1, 5000 );
         camera.position.y = -1000;
 
         scene = new THREE.Scene();
@@ -16,8 +16,8 @@
         // Lights, gotta be able to see shit
         var light;
         scene.add( new THREE.AmbientLight( 0x3385ff ) );
-        light = new THREE.DirectionalLight( 0x0066ff, 3);
-        light.position.set( 0,-2,0 );
+        light = new THREE.DirectionalLight( 0x0066ff, 2);
+        light.position.set( camera.position.x, camera.position.y, camera.position.z);
         scene.add( light );
 
         // Material to be used in our sphere
@@ -44,16 +44,16 @@
 
         // More setup stuff for renderer
         renderer = new THREE.WebGLRenderer({alpha:true});
-        renderer.setSize( window.innerWidth, 300 );
+        renderer.setSize( window.innerWidth, 400 );
         container.appendChild( renderer.domElement );
         container.addEventListener( 'resize', onWindowResize, false );
       }
 
       // Makes it so it doesnt break when you adjust window size
       function onWindowResize() {
-        camera.aspect = window.innerWidth / 300;
+        camera.aspect = window.innerWidth / 400;
         camera.updateProjectionMatrix();
-        renderer.setSize( window.innerWidth, 300 );
+        renderer.setSize( window.innerWidth, 400 );
       }
 
       function animate() {

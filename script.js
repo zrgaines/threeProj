@@ -1,6 +1,8 @@
 $( document ).ready(function() {
     $('#headerText').addClass('animated fadeInDown');
     $('#subHeading').addClass('animated fadeInDown');
+
+    //On hover, show title + author
     $('.projDiv').hover(
       function(){
         

@@ -10,15 +10,15 @@
         var pink = new THREE.Color(0xfca4c5);
 
         var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 300, 0.1, 1000 );
+        var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 400, 0.1, 1000 );
 
         var renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize( window.innerWidth, 300 );
+        renderer.setSize( window.innerWidth, 400 );
         container2.appendChild( renderer.domElement );
 
         //THREEx.WindowResize(renderer, camera);
         var shape = [];
-        var shapeSpeed = .2;
+        var shapeSpeed = .15;
 
         geometry = new THREE.IcosahedronGeometry(2.5,0);
         material = new THREE.MeshNormalMaterial({ color: 0x0000ff });
@@ -34,14 +34,14 @@
         light.position.set(0,250,0);
         scene.add(light);
 
-        camera.position.set(3,4,10); // x y z
+        camera.position.set(3,4,10);
 
         function render() {
           requestAnimationFrame( render );
 
           for (var i = 0; i < shape.length; i++) {
-            if(shape[i].position.x > 40) {
-              shape[i].position.x = -25;
+            if(shape[i].position.x > 30) {
+              shape[i].position.x = -23;
             }
             shape[i].position.x += shapeSpeed;
           }
