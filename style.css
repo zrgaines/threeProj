@@ -72,6 +72,18 @@ h3 {
   background: no-repeat center center fixed -webkit-linear-gradient(-45deg,#7658ed, #fca4c5);
 }
 
+#projDiv3 {
+background-image: no-repeat center center fixed -webkit-linear-gradient(-45deg, #BCEDF6, #6F7D8C);
+background-image: no-repeat center center fixed -o-linear-gradient(-45deg, #BCEDF6, #6F7D8C);
+background: no-repeat center center fixed linear-gradient(-45deg, #BCEDF6, #6F7D8C);
+}
+#projDiv3 .projTitle{
+  color: #A32900;
+}
+#projDiv3 .projAuthor{
+  color: #A32900;
+}
+
 .disNone {
   display: none; }
 

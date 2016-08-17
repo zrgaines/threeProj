@@ -59,8 +59,8 @@ window.addEventListener( 'load', function() {
 
 function render() {
   var object = scene.children[1];
-  object.rotation.z += .0001;
-   object.rotation.x += .0001;
+  object.rotation.z += .001;
+   object.rotation.x += .001;
 
   material.uniforms[ 'time' ].value = .00025 * ( Date.now() - start );
   // let there be light
