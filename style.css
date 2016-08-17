@@ -16,6 +16,16 @@ h3 {
   font-size: 2em;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  
+}
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header {
   height: 400px;
   background: no-repeat center center fixed linear-gradient(45deg, #E1315b, #008DCB); 
@@ -29,11 +39,20 @@ h3 {
   animation-duration: 2s;
   animation-delay: .1s;
   font-size: 5em;
+  width: 30%;
 }
 
 #subHeading {
   animation-duration: 2s;
   animation-delay: .4s;
+  width: 40%;
+}
+
+#headerSmall {
+  animation-duration: 2s;
+  animation-delay: .4s;
+  width: 50%;
+  font-size: 20px;
 }
 
 .projTitle, .projAuthor {
@@ -96,4 +115,16 @@ background: no-repeat center center fixed linear-gradient(-45deg, #BCEDF6, #6F7D
   padding: 0px; 
 }
 
+#footer {
+  text-align: center;
+  padding-top: 20px;
+  height: 100px;
+  background: no-repeat center center fixed linear-gradient( #E1315b, #008DCB); 
+  background: no-repeat center center fixed -webkit-linear-gradient( #E1315b, #008DCB);
+  background: no-repeat center center fixed -o-linear-gradient( #E1315b, #008DCB);
+}
+
+.fa-2x {
+  margin: 5px;
+}
 /*# sourceMappingURL=style.css.map */
