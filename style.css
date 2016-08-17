@@ -1,16 +1,22 @@
 /* colors yall */
 /* color yalllllll */
+
 body {
   font-family: 'Raleway', sans-serif;
 }
 
+@media only screen and (max-width: 480px) {body { font-size: 10px; }}
+@media only screen and (max-width: 1024px) {body { font-size: 12px; }}
+@media only screen and (max-width: 1600px) {body { font-size: 14px; }}
+@media only screen and (min-width: 1601px) {body { font-size: 18px; }}
+
 h2 {
   margin-bottom: 5px;
-  font-size: 50px;
+  font-size: 3em;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 2em;
 }
 
 .header {
@@ -25,6 +31,7 @@ h3 {
 #headerText {
   animation-duration: 2s;
   animation-delay: .1s;
+  font-size: 5em;
 }
 
 #subHeading {
@@ -33,21 +40,33 @@ h3 {
 }
 
 .projTitle, .projAuthor {
-  margin-left: 20%; 
   animation-duration: 2s;
 }
 
 .projTitle {
+  margin-left: 20%; 
   animation-delay: 0s;
 }
 
 .projAuthor {
+  margin-left: 22%;
   animation-delay: .3s;
 }
 
 .wrapper {
-  margin: 20px 0 20px 0;
+  padding: 20px 0 0 0;
+  margin-bottom: 20px;
   height: 120px; 
+}
+
+#projDiv1 {
+  background: no-repeat center center fixed -webkit-linear-gradient(#272727, #2A2D34);
+  background: no-repeat center center fixed -o-linear-gradient(#272727, #2A2D34);
+  background: no-repeat center center fixed linear-gradient(#272727, #2A2D34); 
+}
+
+#projDiv2 {
+  background: no-repeat center center fixed -webkit-linear-gradient(45deg,#7658ed, #fca4c5);
 }
 
 .disNone {
