@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-  $('.proj').find('canvas').addClass('disNone');
     //Fade down of the header text
     
     $('#headerText').addClass('animated fadeInDown');
@@ -32,35 +31,35 @@ $( document ).ready(function() {
 
     //These functions will show/hide each project on click
     $('#projDiv1').on('click', function() {
-      if($('#proj1').find('canvas').hasClass('disNone')) {
-        $('.fa-play-circle').addClass('disNone');
-        $('#proj1').find('canvas').removeClass('disNone');
+      if($('#proj1').hasClass('disNone')) {
+        $('#ic1').addClass('disNone');
+        $('#proj1').removeClass('disNone');
       }
         else {
-          $('.fa-play-circle').removeClass('disNone');
-          $('#proj1').find('canvas').addClass('disNone');
+          $('#ic1').removeClass('disNone');
+          $('#proj1').addClass('disNone');
         }
     })
 
         $('#projDiv2').on('click', function() {
-          if($('#proj2').find('canvas').hasClass('disNone')) {
-            $('.fa-play-circle').addClass('disNone');
-            $('#proj2').find('canvas').removeClass('disNone');
+          if($('#proj2').hasClass('disNone')) {
+            $('#ic2').addClass('disNone');
+            $('#proj2').removeClass('disNone');
         }
         else {
-          $('.fa-play-circle').removeClass('disNone');
-          $('#proj2').find('canvas').addClass('disNone');
+          $('#ic2').removeClass('disNone');
+          $('#proj2').addClass('disNone');
         }
     })
 
         $('#projDiv3').on('click', function() {
-          if($('#proj3').find('canvas').hasClass('disNone')) {
-            $('.fa-play-circle').addClass('disNone');
-            $('#proj3').find('canvas').removeClass('disNone');
+          if($('#proj3').hasClass('disNone')) {
+            $('#ic3').addClass('disNone');
+            $('#proj3').removeClass('disNone');
         } 
         else {
-          $('.fa-play-circle').removeClass('disNone');
-          $('#proj3').find('canvas').addClass('disNone');
+          $('#ic3').removeClass('disNone');
+          $('#proj3').addClass('disNone');
         }
     })
 });
