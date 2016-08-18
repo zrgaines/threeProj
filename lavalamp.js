@@ -18,7 +18,7 @@ window.addEventListener( 'load', function() {
   // and place it 100 units away, looking towards the center of the scene
   camera = new THREE.PerspectiveCamera( 
     fov, 
-    window.innerWidth / 400, 
+    window.innerWidth / 700, 
     1, 
     10000 );
   camera.position.z = 100;
@@ -49,7 +49,7 @@ window.addEventListener( 'load', function() {
 
   // create the renderer and attach it to the DOM
   renderer = new THREE.WebGLRenderer({alpha: true});
-  renderer.setSize( window.innerWidth, 400 );
+  renderer.setSize( window.innerWidth, 800 );
 
   container.appendChild( renderer.domElement );
 

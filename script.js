@@ -23,4 +23,13 @@ $( document ).ready(function() {
         $(this).parent().find('h3').addClass('animated fadeOutLeft');
       }
     )
+
+    $('#projDiv1').on('click', function() {
+      if($('#proj1').hasClass('disNone')) {
+        $('#proj1').removeClass('disNone');
+      }
+        else {
+          $('#proj1').addClass('disNone');
+        }
+    })
 });

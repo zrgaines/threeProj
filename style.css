@@ -38,21 +38,19 @@ a:link, a:visited {
 #headerText {
   animation-duration: 2s;
   animation-delay: .1s;
-  font-size: 5em;
-  width: 30%;
+  font-size: 10em;
 }
 
 #subHeading {
   animation-duration: 2s;
   animation-delay: .4s;
-  width: 40%;
+  font-size: 3em;
 }
 
 #headerSmall {
   animation-duration: 2s;
   animation-delay: .4s;
-  width: 50%;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .projTitle, .projAuthor {
@@ -75,10 +73,17 @@ a:link, a:visited {
   height: 180px; 
 }
 
+.projDiv {
+  width: 100%;
+  height: 400px;
+  padding: 0px; 
+}
+
 #projDiv1 {
   background: no-repeat center center fixed -webkit-linear-gradient(#272727, #2A2D34);
   background: no-repeat center center fixed -o-linear-gradient(#272727, #2A2D34);
   background: no-repeat center center fixed linear-gradient(#272727, #2A2D34); 
+  height: 1000px;
 }
 
 #projDiv1 .projTitle{
@@ -92,9 +97,10 @@ a:link, a:visited {
 }
 
 #projDiv3 {
-background-image: no-repeat center center fixed -webkit-linear-gradient(-45deg, #BCEDF6, #6F7D8C);
-background-image: no-repeat center center fixed -o-linear-gradient(-45deg, #BCEDF6, #6F7D8C);
-background: no-repeat center center fixed linear-gradient(-45deg, #BCEDF6, #6F7D8C);
+  background-image: no-repeat center center fixed -webkit-linear-gradient(-45deg, #BCEDF6, #6F7D8C);
+  background-image: no-repeat center center fixed -o-linear-gradient(-45deg, #BCEDF6, #6F7D8C);
+  background: no-repeat center center fixed linear-gradient(-45deg, #BCEDF6, #6F7D8C);
+  height: 1000px;
 }
 #projDiv3 .projTitle{
   color: #A32900;
@@ -109,11 +115,7 @@ background: no-repeat center center fixed linear-gradient(-45deg, #BCEDF6, #6F7D
 .disBlock {
   display: block; }
 
-.projDiv {
-  width: 100%;
-  height: 400px;
-  padding: 0px; 
-}
+
 
 #footer {
   text-align: center;

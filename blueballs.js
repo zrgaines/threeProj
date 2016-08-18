@@ -8,7 +8,7 @@
       function init() {
         container = document.getElementById( 'proj1' );
 
-        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 400, 1, 5000 );
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 800, 1, 5000 );
         camera.position.y = -1000;
 
         scene = new THREE.Scene();
@@ -44,16 +44,16 @@
 
         // More setup stuff for renderer
         renderer = new THREE.WebGLRenderer({alpha:true});
-        renderer.setSize( window.innerWidth, 400 );
+        renderer.setSize( window.innerWidth, 800 );
         container.appendChild( renderer.domElement );
         container.addEventListener( 'resize', onWindowResize, false );
       }
 
       // Makes it so it doesnt break when you adjust window size
       function onWindowResize() {
-        camera.aspect = window.innerWidth / 400;
+        camera.aspect = window.innerWidth / 800;
         camera.updateProjectionMatrix();
-        renderer.setSize( window.innerWidth, 400 );
+        renderer.setSize( window.innerWidth, 800 );
       }
 
       function animate() {
