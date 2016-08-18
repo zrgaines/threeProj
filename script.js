@@ -34,18 +34,18 @@ $( document ).ready(function() {
     })
 
         $('#projDiv2').on('click', function() {
-      if($('#proj2').hasClass('disNone')) {
-        $('#proj2').removeClass('disNone');
-      }
+          if($('#proj2').hasClass('disNone')) {
+            $('#proj2').removeClass('disNone');
+        }
         else {
           $('#proj2').addClass('disNone');
         }
     })
 
         $('#projDiv3').on('click', function() {
-      if($('#proj3').hasClass('disNone')) {
-        $('#proj3').removeClass('disNone');
-      }
+          if($('#proj3').hasClass('disNone')) {
+            $('#proj3').removeClass('disNone');
+        } 
         else {
           $('#proj3').addClass('disNone');
         }
