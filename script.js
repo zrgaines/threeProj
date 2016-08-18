@@ -1,10 +1,4 @@
 $( document ).ready(function() {
-    //Fade down of the header text
-    
-    $('#headerText').addClass('animated fadeInDown');
-    $('#subHeading').addClass('animated fadeInDown');
-    $('#headerSmall').addClass('animated fadeInDown');
-
     //On hover, show title + author
     $('.proj').hover(
       function(){
