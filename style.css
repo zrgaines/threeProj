@@ -93,7 +93,10 @@ a:link, a:visited {
   color: #6666ff;
 }
 #projDiv2 {
-  background: no-repeat center center fixed -webkit-linear-gradient(-45deg,#7658ed, #fca4c5);
+  background: no-repeat center center fixed -webkit-linear-gradient(bottom left, #7658ed, #fca4c5);
+  background: no-repeat center center fixed -o-linear-gradient(bottom left, #7658ed, #fca4c5);
+  background: no-repeat center center fixed linear-gradient(to top right, #7658ed, #fca4c5);
+  height: 600px;
 }
 
 #projDiv3 {

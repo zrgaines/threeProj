@@ -4,23 +4,23 @@ $( document ).ready(function() {
     $('#subHeading').addClass('animated fadeInDown');
     $('#headerSmall').addClass('animated fadeInDown');
     //On hover, show title + author
-    $('.projDiv').hover(
+    $('.proj').hover(
       function(){
         
-        $(this).parent().find('h2').removeClass('animated fadeOutLeft');
-        $(this).parent().find('h3').removeClass('animated fadeOutLeft');
-        $(this).parent().find('h2').removeClass('disNone');
-        $(this).parent().find('h3').removeClass('disNone');
+        $(this).find('h2').removeClass('animated fadeOutLeft');
+        $(this).find('h3').removeClass('animated fadeOutLeft');
+        $(this).find('h2').removeClass('disNone');
+        $(this).find('h3').removeClass('disNone');
 
-        $(this).parent().find('h2').addClass('animated fadeInLeft');
-        $(this).parent().find('h3').addClass('animated fadeInLeft');
+        $(this).find('h2').addClass('animated fadeInLeft');
+        $(this).find('h3').addClass('animated fadeInLeft');
 
       }, function() {
-        $(this).parent().find('h2').removeClass('animated fadeInLeft');
-        $(this).parent().find('h3').removeClass('animated fadeInLeft');
+        $(this).find('h2').removeClass('animated fadeInLeft');
+        $(this).find('h3').removeClass('animated fadeInLeft');
 
-        $(this).parent().find('h2').addClass('animated fadeOutLeft');
-        $(this).parent().find('h3').addClass('animated fadeOutLeft');
+        $(this).find('h2').addClass('animated fadeOutLeft');
+        $(this).find('h3').addClass('animated fadeOutLeft');
       }
     )
 
@@ -30,6 +30,24 @@ $( document ).ready(function() {
       }
         else {
           $('#proj1').addClass('disNone');
+        }
+    })
+
+        $('#projDiv2').on('click', function() {
+      if($('#proj2').hasClass('disNone')) {
+        $('#proj2').removeClass('disNone');
+      }
+        else {
+          $('#proj2').addClass('disNone');
+        }
+    })
+
+        $('#projDiv3').on('click', function() {
+      if($('#proj3').hasClass('disNone')) {
+        $('#proj3').removeClass('disNone');
+      }
+        else {
+          $('#proj3').addClass('disNone');
         }
     })
 });
