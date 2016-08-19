@@ -30,4 +30,4 @@ Gall3ry.js is a visual art gallery for projects made in three.js. The goal is to
     * My goal is to make this page a three.js portfolio for myself
   5. MORE CSS ANIMATIONS!!!!
 
-(http://peddler-elton-17434.bitballoon.com/ "Temporary Link")
+[Temporary Link] (http://peddler-elton-17434.bitballoon.com/ "Temporary Link to site")
