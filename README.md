@@ -11,6 +11,7 @@ Gall3ry.js is a visual art gallery for projects made in three.js. The goal is to
   
 ## Known Bugs
   1. Performance issues
+    * For now, only the top two three.js projects will be shown
     * Due to the multiple renders on one page, frame rate drops
     * This makes me very sad.
     * Multiple possible solutions
@@ -18,6 +19,7 @@ Gall3ry.js is a visual art gallery for projects made in three.js. The goal is to
     * Does not exist.
   3. Responsive design
     * Nope lol
+    * Looks much better on high resolution screens
 
 ## Ice Box
   1. Fix performance -- Possible solutions
