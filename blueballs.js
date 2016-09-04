@@ -1,8 +1,16 @@
       // Initialization      
       var container;
       var camera, scene, renderer;
-      init();
-      animate();
+      var counter = 2;
+
+      $('#projDiv1').on('click', function(){
+        if(counter % 2 == 0){
+          counter++;
+          init();
+          animate();
+        }
+      })
+      
 
       //Geo Spheres (formerly Blue Balls)
       function init() {
