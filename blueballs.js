@@ -1,11 +1,11 @@
       // Initialization      
-      var container;
-      var camera, scene, renderer;
-      var counter = 2;
+      var container1;
+      var camera1, scene1, renderer1;
+      var counter1 = 2;
 
       $('#projDiv1').on('click', function(){
-        if(counter % 2 == 0){
-          counter++;
+        if(counter1 % 2 == 0){
+          counter1++;
           init();
           animate();
         }
@@ -14,22 +14,22 @@
 
       //Geo Spheres (formerly Blue Balls)
       function init() {
-        container = document.getElementById( 'proj1' );
+        container1 = document.getElementById( 'proj1' );
 
-        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / 800, 1, 5000 );
-        camera.position.y = -1000;
+        camera1 = new THREE.PerspectiveCamera( 45, window.innerWidth / 800, 1, 5000 );
+        camera1.position.y = -1000;
 
-        scene = new THREE.Scene();
+        scene1 = new THREE.Scene();
         
         // Lights, gotta be able to see shit
-        var light;
-        scene.add( new THREE.AmbientLight( 0x3385ff ) );
-        light = new THREE.DirectionalLight( 0x0066ff, 2);
-        light.position.set( camera.position.x, camera.position.y, camera.position.z);
-        scene.add( light );
+        var light1;
+        scene1.add( new THREE.AmbientLight( 0x3385ff ) );
+        light1 = new THREE.DirectionalLight( 0x0066ff, 2);
+        light1.position.set( camera1.position.x, camera1.position.y, camera1.position.z);
+        scene1.add( light1 );
 
         // Material to be used in our sphere
-        var material = new THREE.MeshLambertMaterial({
+        var material1 = new THREE.MeshLambertMaterial({
           side: THREE.DoubleSide,
           wireframe: true,
           color: 0x6666ff
@@ -40,47 +40,47 @@
           var x = Math.random() * 2000 - 1000;
           var y = Math.random() * 2000 - 1000;
           var z = Math.random() * 2000 - 1000;
-          var object = new THREE.Mesh( new THREE.SphereGeometry(100, 30, 10), material );
-          object.position.set( x, y, z );
-          scene.add( object );
+          var object1 = new THREE.Mesh( new THREE.SphereGeometry(100, 30, 10), material1 );
+          object1.position.set( x, y, z );
+          scene1.add( object1 );
         }
 
         // More setup stuff for renderer
-        renderer = new THREE.WebGLRenderer({alpha:true});
-        renderer.setSize( window.innerWidth, 800 );
-        container.appendChild( renderer.domElement );
-        container.addEventListener( 'resize', onWindowResize, false );
+        renderer1 = new THREE.WebGLRenderer({alpha:true});
+        renderer1.setSize( window.innerWidth, 800 );
+        container1.appendChild( renderer1.domElement );
+        container1.addEventListener( 'resize', onWindowResize, false );
       }
 
       // Makes it so it doesnt break when you adjust window size
       function onWindowResize() {
-        camera.aspect = window.innerWidth / 800;
-        camera.updateProjectionMatrix();
-        renderer.setSize( window.innerWidth, 800 );
+        camera1.aspect = window.innerWidth / 800;
+        camera1.updateProjectionMatrix();
+        renderer1.setSize( window.innerWidth, 800 );
       }
 
       function animate() {
         requestAnimationFrame( animate );
-        render();
+        render1();
       }
             
       // Update Loop
-      function render() {
+      function render1() {
         var timer = Date.now() * 0.00001;
 
         //Creates the AweSOME camera rotation!!!
-        camera.position.x = Math.cos( timer * 50 ) * 200;
-        camera.position.y = Math.tan( timer * 50 ) * 200;
-        camera.position.z = Math.sin( timer * 50 ) * 200;
-        camera.lookAt( scene.position );
+        camera1.position.x = Math.cos( timer * 50 ) * 200;
+        camera1.position.y = Math.tan( timer * 50 ) * 200;
+        camera1.position.z = Math.sin( timer * 50 ) * 200;
+        camera1.lookAt( scene1.position );
 
-        for ( var i = 0, l = scene.children.length; i < l; i ++ ) {
-          var object = scene.children[ i ];
+        for ( var i = 0, l = scene1.children.length; i < l; i ++ ) {
+          var object1 = scene1.children[ i ];
           
           // Makes the sphere rotation
-          object.rotation.x = timer * 20;
-          object.rotation.y = timer * 15;
-          object.rotation.z = timer * 20;
+          object1.rotation.x = timer * 20;
+          object1.rotation.y = timer * 15;
+          object1.rotation.z = timer * 20;
         }
-        renderer.render( scene, camera );
+        renderer1.render( scene1, camera1 );
       }

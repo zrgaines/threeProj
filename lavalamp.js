@@ -67,13 +67,13 @@ var container3,
 
 
 function render3() {
-  var object = scene3.children[1];
-  object.rotation.z += .001;
-   object.rotation.x += .001;
+  var object3 = scene3.children[1];
+  object3.rotation.z += .001;
+   object3.rotation.x += .001;
 
   material.uniforms[ 'time' ].value = .00025 * ( Date.now() - start );
   // let there be light
   renderer3.render( scene3, camera3 );
-  requestAnimationFrame( render );
+  requestAnimationFrame( render3 );
 
 }

@@ -27,9 +27,9 @@
 
         var geometry2 = new THREE.IcosahedronGeometry(2.5,0);
         var material2 = new THREE.MeshNormalMaterial({ color: 0x0000ff });
-        shape[0] = new THREE.Mesh( geometry, material );
-        shape[1] = new THREE.Mesh( geometry, material );
-        shape[2] = new THREE.Mesh( geometry, material );
+        shape[0] = new THREE.Mesh( geometry2, material2 );
+        shape[1] = new THREE.Mesh( geometry2, material2 );
+        shape[2] = new THREE.Mesh( geometry2, material2 );
         shape[0].position.set(0,5,0);
         shape[1].position.set(0,5,0);
         shape[2].position.set(0,5,0);
