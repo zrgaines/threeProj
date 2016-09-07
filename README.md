@@ -9,27 +9,15 @@ Gall3ry.js is a visual art gallery for projects made in three.js. The goal is to
   4. Three.js
   5. CSS Animations.
   
-## Known Bugs
-  1. Performance issues
-    * For now, only the top two three.js projects will be shown
-    * Due to the multiple renders on one page, frame rate drops
-    * This makes me very sad.
-    * Multiple possible solutions
-  2. Browser support
-    * Does not exist.
+## Known Issues
   3. Responsive design
     * Nope lol
     * Looks much better on high resolution screens
 
 ## Ice Box
-  1. Fix performance -- Possible solutions
-    * Render the canvas containers with a framework, e.g. React
-    * Put all projects into one renderer, display them in seperate scenes
-    * Make the on click function within the three.js files, instead of jQuery
-  2. Browser Support
-  3. Responsive Design
-  4. Add more projects
+  1. Responsive Design
+  2. Add more projects
     * My goal is to make this page a three.js portfolio for myself
-  5. MORE CSS ANIMATIONS!!!!
+  3. MORE CSS ANIMATIONS!!!!
 
 [Temporary Link] (http://peddler-elton-17434.bitballoon.com/ "Temporary Link to site")
